@@ -1,65 +1,92 @@
-import Image from "next/image";
+import { Navbar } from "@/components/layout/navbar";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <Navbar />
+
+      <main>
+        {/* Hero */}
+        <section id="hero" className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-6xl md:text-8xl font-bold tracking-tight">
+              SUKRIT SAHA
+            </h1>
+            <p className="mt-4 text-lg md:text-xl text-muted">
+              Developer who turns ideas into interactive realities
+            </p>
+          </div>
+        </section>
+
+        {/* About */}
+        <section id="about" className="min-h-screen flex items-center py-24 px-6">
+          <div className="mx-auto max-w-5xl">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">About</h2>
+            <p className="text-lg text-muted leading-relaxed max-w-2xl">
+              Full-Stack Engineer with 3 years of experience delivering complete
+              product solutions spanning frontend, backend, and mobile ecosystems.
+            </p>
+          </div>
+        </section>
+
+        {/* Journey */}
+        <section id="journey" className="min-h-screen flex items-center py-24 px-6">
+          <div className="mx-auto max-w-5xl">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">Journey</h2>
+            <p className="text-muted">Career timeline coming in Phase 3.</p>
+          </div>
+        </section>
+
+        {/* Experience */}
+        <section id="experience" className="min-h-screen flex items-center py-24 px-6">
+          <div className="mx-auto max-w-5xl">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">Experience</h2>
+            <p className="text-muted">Experience cards coming in Phase 4.</p>
+          </div>
+        </section>
+
+        {/* Projects */}
+        <section id="projects" className="min-h-screen flex items-center py-24 px-6">
+          <div className="mx-auto max-w-5xl">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">Projects</h2>
+            <p className="text-muted">Project showcase coming in Phase 4.</p>
+          </div>
+        </section>
+
+        {/* Skills */}
+        <section id="skills" className="min-h-screen flex items-center py-24 px-6">
+          <div className="mx-auto max-w-5xl">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">Skills</h2>
+            <p className="text-muted">Skills visualization coming in Phase 5.</p>
+          </div>
+        </section>
+
+        {/* Education */}
+        <section id="education" className="min-h-screen flex items-center py-24 px-6">
+          <div className="mx-auto max-w-5xl">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">Education</h2>
+            <p className="text-muted">Education cards coming in Phase 5.</p>
+          </div>
+        </section>
+
+        {/* Beyond Code */}
+        <section id="beyond" className="min-h-screen flex items-center py-24 px-6">
+          <div className="mx-auto max-w-5xl">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">Beyond Code</h2>
+            <p className="text-muted">Interests & hobbies coming in Phase 5.</p>
+          </div>
+        </section>
+
+        {/* Contact */}
+        <section id="contact" className="min-h-screen flex items-center justify-center py-24 px-6">
+          <div className="text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">
+              Let&apos;s Build Something Together
+            </h2>
+            <p className="text-muted">Contact form coming in Phase 6.</p>
+          </div>
+        </section>
       </main>
-    </div>
+    </>
   );
 }
