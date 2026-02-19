@@ -324,10 +324,32 @@ Portfolio 2.0/
 
 ## H. Session Instructions
 
-1. **At the start of each session**, read the Phase Tracker (Section F) to know the current phase.
-2. **Complete only the current phase** — do not skip ahead.
-3. **After completing a phase**, mark all its tasks as `[x]` in the Phase Tracker.
-4. **Run `npm run dev`** to verify after each phase.
-5. **Run `npm run build`** at the end of each phase to catch TypeScript errors.
-6. **Commit after each phase** with a descriptive message.
-7. To continue, say: **"Continue with Phase N"** where N is the next incomplete phase.
+### Workflow per Phase
+1. **Read Phase Tracker** (Section F) to identify the current phase.
+2. **Create a feature branch** from `main`:
+   ```
+   git checkout -b phase-N-description
+   ```
+3. **Complete only the current phase** — do not skip ahead.
+4. **Run `npm run build`** to catch TypeScript errors.
+5. **Run `npm run dev`** to verify visually.
+6. **Commit** with a descriptive message on the feature branch.
+7. **Push & create PR** to `main`:
+   ```
+   git push -u origin phase-N-description
+   gh pr create --title "Phase N: Description" --body "..."
+   ```
+8. **Merge the PR** (after validation):
+   ```
+   gh pr merge --squash --delete-branch
+   ```
+9. **Mark phase tasks as `[x]`** in CLAUDE.md Phase Tracker.
+10. **Pull main** and repeat for next phase.
+
+### Deployment
+- **Vercel** is connected to `main` — every merge auto-deploys.
+- **Preview deploys** are generated for each PR branch.
+
+### Repo
+- GitHub: github.com/Sukrittt/portfolio-v2
+- Vercel: (URL added after first deploy)
